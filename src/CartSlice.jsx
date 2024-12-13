@@ -22,13 +22,14 @@ export const CartSlice = createSlice({
 
     },
     removeItem: (state, action) => {
-      const itemToRemove = state.items.find(item => item.name === action.payload);
-    
+      const itemToRemove = state.items.find(item => item.id === action.payload);
+  
       if (itemToRemove) {
-        // Decrease totalQuantity by the quantity of the removed item
+        // Decrease the totalQuantity by the quantity of the removed item
         state.totalQuantity -= itemToRemove.quantity;
+        
         // Filter out the item from the cart
-        state.items = state.items.filter(item => item.name !== action.payload);
+        state.items = state.items.filter(item => item.id !== action.payload);
       }
 
     },

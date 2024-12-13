@@ -278,3 +278,7 @@ body {
     cursor: not-allowed; /* Optional: Changes the cursor to show it's disabled */
     color: #ccc; /* Optional: Changes the text color to a light grey */
   }
+  .product-grid h1 {
+    text-align: center;
+    padding-top: 1rem;
+}
