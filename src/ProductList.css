@@ -250,3 +250,31 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+  .cart {
+    position: relative; /* Make sure the cart container is the reference for positioning the quantity */
+    display: flex;
+    justify-content: center; /* Center the cart icon horizontally */
+    align-items: center; /* Center the cart icon vertically */
+  }
+  
+  .totalQuantity {
+    position: absolute; /* Position the number inside the cart icon */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Fine-tune centering to ensure it's truly centered */
+    color: white; /* Text color */
+    font-size:30px; /* Adjust font size */
+    border-radius: 50%; /* Circular badge */
+    width: 20px; /* Size of the badge */
+    height: 20px; /* Size of the badge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2px; /* Optional: extra padding to adjust the size */
+  }
+  button.product-button:disabled {
+    background-color: grey !important;  /* Grey background color */
+    cursor: not-allowed; /* Optional: Changes the cursor to show it's disabled */
+    color: #ccc; /* Optional: Changes the text color to a light grey */
+  }
